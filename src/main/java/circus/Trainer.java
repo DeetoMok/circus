@@ -7,13 +7,15 @@ public class Trainer {
         System.out.println(a.speak());
         Duck d2 = (Duck) a; // downcasting
         train(new Duck());
-        // train(new Parrot());
-        Animal a2 = new Animal();
-        Bird b2 = new Bird();
+         train(new Parrot());     //this will run an error since parrot cannot be casted to a duck
+//        Animal a2 = new Animal();
+//        Bird b2 = new Bird();
     }
 
     private static void train(Bird bird) {
-        Duck d = (Duck) bird;
-        d.swim();
+        if (bird instanceof Duck) {
+            Duck d = (Duck) bird;       //bird must be converted into a duck first for the bird to swim
+            d.swim();
+        }
     }
 }
