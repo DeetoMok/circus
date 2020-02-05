@@ -20,7 +20,7 @@ then
 fi
 
 # run the program, feed commands from input.txt file and redirect the output to the ACTUAL.TXT
-java -classpath ../bin Circus > ACTUAL.TXT
+java -classpath ../bin circus.Circus > ACTUAL.TXT
 
 # compare the output to the expected output
 diff ACTUAL.TXT EXPECTED.TXT
